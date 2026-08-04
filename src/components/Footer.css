@@ -1,0 +1,359 @@
+/*--------------------------------------------------
+  FOOTER
+--------------------------------------------------*/
+
+.footer {
+  width: 100%;
+
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--brand-accent);
+}
+
+.footer-inner {
+  padding: 24px 12px 16px;
+}
+
+
+/*--------------------------------------------------
+  LOGO
+--------------------------------------------------*/
+
+.footer-logo-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 24px;
+}
+
+.footer-logo {
+  display: block;
+  width: 110px;
+  height: auto;
+}
+
+
+/*--------------------------------------------------
+  NAVEGACIÓN MÓVIL Y TABLET
+--------------------------------------------------*/
+
+.footer-nav-mobile {
+  width: 100%;
+}
+
+.nav-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-footer li {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.nav-footer a {
+  position: relative;
+  width: 76px;
+  min-height: 76px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding-top: 6px;
+  
+  border: 0;
+  border-radius: 0;
+
+  transition:transform 0.3s ease;
+}
+.nav-footer a::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+
+  width: 52px;
+  height: 52px;
+
+  border: 1px solid transparent;
+  border-radius: 14px;
+
+  background-color: transparent;
+  transform: translateX(-50%);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.nav-footer a.is-active::before {
+  background-color: var(--color-active);
+  border-color: var(--brand-accent);
+}
+
+.nav-footer a:hover {
+  background-color: rgb(192 146 68 / 15%);
+}
+
+.nav-footer img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+  filter: saturate(0.85);
+
+  transition: transform 0.25s ease;
+}
+
+.nav-footer a:hover img {
+  transform: scale(1.06);
+}
+
+.nav-footer span {
+   position: relative;
+  z-index: 1;
+
+  font-family: var(--font-main);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-regular);
+  color: var(--brand-primary);
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------
+  NAVEGACIÓN DESKTOP
+--------------------------------------------------*/
+
+.footer-nav-desktop {
+  display: none;
+}
+
+
+/*--------------------------------------------------
+  COPYRIGHT Y TEXTOS LEGALES
+--------------------------------------------------*/
+
+.footer-bottom {
+  margin-top: 24px;
+  padding-top: 16px;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-copyright {
+  margin: 0;
+
+  font-family: var(--font-main);
+  font-size: 12px;
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.footer-legal {
+  display: none;
+}
+
+
+/*--------------------------------------------------
+  TABLET
+--------------------------------------------------*/
+
+@media (min-width: 768px) {
+  .footer-inner {
+    padding: 28px var(--page-padding) 20px;
+  }
+
+  .footer-logo {
+    width: 130px;
+  }
+
+  .nav-footer {
+    max-width: 650px;
+    margin-inline: auto;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+  }
+  .nav-footer a {
+    width: 92px;
+    min-height: 86px;
+    gap: 7px;
+  }
+
+  .nav-footer a::before {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+  }
+
+  .nav-footer img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-footer span {
+    font-size: var(--text-small);
+  }
+}
+
+
+/*--------------------------------------------------
+  DESKTOP
+--------------------------------------------------*/
+
+@media (min-width: 1024px) {
+  .footer-inner {
+    min-height: 230px;
+    padding: 48px var(--page-padding) 28px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    column-gap: 80px;
+  }
+
+  .footer-logo-link {
+    grid-column: 1;
+    grid-row: 1;
+
+    margin: 0;
+  }
+
+  .footer-logo {
+    width: 190px;
+  }
+
+  .footer-nav-mobile {
+    display: none;
+  }
+
+  .footer-nav-desktop {
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer-desktop-list {
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 3vw, 52px);
+
+    margin: 0;
+    padding: 8px 0 0;
+    list-style: none;
+  }
+
+  .footer-desktop-list a {
+    position: relative;
+
+    display: block;
+    padding-block: 6px;
+
+    font-family: var(--font-main);
+    font-size: var(--text-h3);
+    font-weight: 500;
+    color: var(--brand-primary);
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+  }
+
+  .footer-desktop-list a::after {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+
+    background-color: var(--brand-secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.25s ease;
+  }
+
+  .footer-desktop-list a:hover,
+  .footer-desktop-list a.active {
+    color: var(--brand-secondary);
+  }
+
+  .footer-desktop-list a:hover::after,
+  .footer-desktop-list a.active::after {
+    transform: scaleX(1);
+  }
+
+  .footer-bottom {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    margin-top: 48px;
+    padding-top: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-legal span {
+    font-family: var(--font-main);
+    font-size: 14px;
+    color: var(--color-text-muted);
+  }
+}
+
+
+/*--------------------------------------------------
+  DESKTOP GRANDE
+--------------------------------------------------*/
+
+@media (min-width: 1440px) {
+  .footer-inner {
+    min-height: 250px;
+    padding-top: 56px;
+  }
+
+  .footer-logo {
+    width: 210px;
+  }
+
+  .footer-bottom {
+    margin-top: 56px;
+  }
+}

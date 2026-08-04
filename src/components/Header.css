@@ -1,0 +1,201 @@
+/*------------------------------------*\
+  HEADER
+\*------------------------------------*/
+
+.header-main {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgb(249 236 196 / 95%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-wrapper {
+  width: 100%;
+  min-height: 62px;
+  padding-inline: var(--page-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/*------------------------------------*\
+  LOGO
+\*------------------------------------*/
+
+.header-logo-link {
+  display: block;
+  flex-shrink: 0;
+}
+
+.logo-header {
+  display: block;
+  width: 105px;
+  height: auto;
+}
+
+
+/*------------------------------------*\
+  MENU BUTTON
+\*------------------------------------*/
+
+.menu-toggle {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*------------------------------------*\
+  MOBILE NAVIGATION
+\*------------------------------------*/
+
+.nav-main {
+  display: none;
+
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 16px;
+  z-index: 50;
+
+  width: min(100% - 32px, 320px);
+}
+
+.nav-main.is-open {
+  display: block;
+  padding: 18px 20px;
+
+  background-color: var(--brand-main);
+  border: 1px solid var(--brand-accent);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px var(--color-shadow);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list li {
+  width: 100%;
+}
+
+.nav-list a {
+  display: block;
+  padding-block: 5px;
+
+  font-family: var(--font-main);
+  font-size: var(--text-title);
+  font-weight: 500;
+  color: var(--brand-primary);
+
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: var(--brand-secondary);
+}
+
+.nav-list a.active {
+  color: var(--brand-secondary);
+}
+
+
+/*------------------------------------*\
+  TABLET
+\*------------------------------------*/
+
+@media (min-width: 768px) {
+  .header-wrapper {
+    min-height: 88px;
+    padding-inline: 24px;
+  }
+
+  .logo-header {
+    width: 150px;
+  }
+
+  .nav-main {
+    right: 24px;
+  }
+}
+
+
+/*------------------------------------*\
+  DESKTOP
+\*------------------------------------*/
+
+@media (min-width: 1024px) {
+  .header-wrapper {
+    min-height: 105px;
+    padding-inline: 32px;
+  }
+
+  .logo-header {
+    width: 210px;
+  }
+
+  .nav-main {
+    display: block;
+
+    position: static;
+    width: auto;
+  }
+
+  .nav-main.is-open {
+    display: block;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(24px, 2.5vw, 48px);
+  }
+
+  .nav-list li {
+    width: auto;
+  }
+
+  .nav-list a {
+    padding-block: 8px;
+
+    font-size: var(--text-h3);
+    white-space: nowrap;
+  }
+}
+
+
+/*------------------------------------*\
+  DESKTOP LARGE
+\*------------------------------------*/
+
+@media (min-width: 1440px) {
+  .header-wrapper {
+    padding-inline: 32px;
+  }
+}

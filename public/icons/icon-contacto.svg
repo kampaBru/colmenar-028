@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 64 64"
+     fill="none">
+
+  <g stroke="#C09244"
+     stroke-width="2.2"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <!-- Hexágono -->
+    <path d="M32 3.5
+             53.7 16
+             53.7 41
+             32 53.5
+             10.3 41
+             10.3 16
+             Z"/>
+
+    <!-- Sobre -->
+    <rect
+      x="18"
+      y="21"
+      width="28"
+      height="20"
+      rx="2.5"/>
+
+    <path d="M19 23 L32 33.5 L45 23"/>
+
+    <path d="M19 40 L28 32"/>
+
+    <path d="M45 40 L36 32"/>
+
+  </g>
+
+</svg>

@@ -1,0 +1,13 @@
+.info-card {
+  padding: 24px;
+  border-radius: 12px;
+}
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.section-text {
+  max-width: 100%;
+}
+/* aquí solo configuraciones propias del componente*/

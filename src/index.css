@@ -1,0 +1,405 @@
+@import "tailwindcss";
+
+
+/*--------------------------------------------------
+  VARIABLES PARA TAILWIND
+--------------------------------------------------*/
+
+@theme {
+  /* Colores Tailwind */
+  --color-primary: var(--brand-primary);
+  --color-secondary: var(--brand-secondary);
+  --color-main: var(--brand-main);
+  --color-accent: var(--brand-accent);
+
+  --color-surface-custom: var(--color-surface);
+  --color-muted: var(--color-text-muted);
+  --color-border-soft: var(--color-border);
+  --color-shadow-custom: var(--color-shadow);
+  --color-active: var(--color-active);
+  --color-alt: var(--color-alt);
+  --color-philosophy: var(--color-philosophy);
+
+  /* Fuentes Tailwind */
+  --font-main: var(--font-main);
+  --font-display: var(--font-display);
+
+  /* Tipografía Tailwind */
+  --text-display: var(--text-display);
+  --text-h1: var(--text-h1);
+  --text-h2: var(--text-h2);
+  --text-h3: var(--text-h3);
+  --text-body: var(--text-body);
+  --text-title: var(--text-title);
+  --text-small: var(--text-small);
+  --text-caption: var(--text-caption);
+
+  /* Interlineados Tailwind */
+  --leading-display: var(--leading-display);
+  --leading-tight: var(--leading-tight);
+  --leading-normal: var(--leading-normal);
+  --leading-extra: var(--leading-extra);
+}
+
+
+/*--------------------------------------------------
+  VARIABLES GENERALES
+--------------------------------------------------*/
+
+:root {
+  /* Fonts */
+  --font-main: "Space Grotesk", sans-serif;
+  --font-display: "DM Serif Display", serif;
+
+  /* Brand */
+  --brand-primary: #3c2b19;
+  --brand-secondary: #c09244;
+  --brand-accent: #a49a43;
+  --brand-main: #f4eee4;
+
+  /* UI */
+  --color-bg: var(--brand-main);
+  --color-surface: #fffaf0;
+  --color-text: var(--brand-primary);
+  --color-text-muted: #6f5b3c;
+  --color-text-light: #ffffff;
+  --color-alt: #ece2d5;
+  --color-border: rgba(60, 43, 25, 0.18);
+  --color-shadow: rgba(60, 43, 25, 0.15);
+  --color-cta: var(--brand-secondary);
+  --color-cta-text: #ffffff;
+  --color-active: rgba(192, 146, 68, 0.6);
+  --color-philosophy: #cdc0b0;
+
+  /* Typography Mobile */
+  --text-display: 40px;
+  --text-h1: 32px;
+  --text-h2: 24px;
+  --text-h3: 20px;
+  --text-body: 16px;
+  --text-title: 18px;
+  --text-small: 14px;
+  --text-caption: 12px;
+
+  /* Line heights */
+  --leading-display: 1;
+  --leading-heading: 1.08;
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-extra: 1.6;
+
+  /* Font weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Margen compartido por Header y Hero */
+  --page-padding: 16px;
+}
+
+
+/*--------------------------------------------------
+  VARIABLES TABLET
+--------------------------------------------------*/
+
+@media (min-width: 768px) {
+  :root {
+    --page-padding: 24px;
+
+    --text-display: 48px;
+    --text-h1: 38px;
+    --text-h2: 28px;
+    --text-h3: 22px;
+    --text-body: 18px;
+    --text-title: 20px;
+    --text-small: 16px;
+    --text-caption: 18px;
+  }
+}
+
+
+/*--------------------------------------------------
+  VARIABLES DESKTOP
+--------------------------------------------------*/
+
+@media (min-width: 1024px) {
+  :root {
+    --text-display: 72px;
+    --text-h1: 48px;
+    --text-h2: 40px;
+    --text-h3: 24px;
+    --text-body: 18px;
+    --text-title: 24px;
+    --text-small: 18px;
+    --text-caption: 22px;
+  }
+}
+
+
+/*--------------------------------------------------
+  VARIABLES DESKTOP GRANDE
+--------------------------------------------------*/
+
+@media (min-width: 1440px) {
+  :root {
+    --page-padding: 32px;
+    --text-display: 84px;
+    --text-h1: 56px;
+    --text-h2: 44px;
+    --text-h3: 28px;
+    --text-body: 18px;
+    --text-title: 24px;
+    --text-small: 20px;
+  }
+}
+
+
+/*--------------------------------------------------
+  UTILIDADES TAILWIND
+--------------------------------------------------*/
+
+@utility text-footer {
+  @apply text-secondary font-semibold italic text-2xl;
+}
+
+
+/*--------------------------------------------------
+  RESET BÁSICO
+--------------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/*--------------------------------------------------
+  LAYOUT GLOBAL
+--------------------------------------------------*/
+
+.container-global {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .container-global {
+    width: min(100% - 3rem, 1100px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-global {
+    width: min(100% - 4rem, 1200px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container-global {
+    width: min(100% - 2rem, 1400px);
+  }
+}
+
+
+/*--------------------------------------------------
+  COMPONENTES: BOTONES SEPARADORES
+--------------------------------------------------*/
+
+.btn-primary {
+  min-width: 120px;
+  height: 42px;
+  margin-top: 8px;
+  padding-inline: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  background-color: var(--brand-secondary);
+  color: var(--brand-primary);
+
+  font-size: var(--text-body);
+  font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-primary);
+  color: var(--brand-secondary);
+  transform: translateY(-1px);
+}
+
+
+.btn-products {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  font-family: var(--font-main);
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--brand-primary);
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.btn-products:hover {
+  color: var(--brand-secondary);
+}
+
+.btn-product__arrow {
+  font-size: 1.25rem;
+  transform: translateY(-1px);
+
+  transition: transform 0.3s ease;
+}
+
+.btn-products:hover .btn-product__arrow {
+  transform: translate(4px, -1px);
+}
+
+
+.btn-filled {
+  width: 100%;
+  max-width: 258px;
+  min-height: 40px;
+  padding-inline: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  background-color: var(--brand-primary);
+  color: var(--brand-secondary);
+
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-filled:hover {
+  background-color: var(--brand-secondary);
+  color: var(--brand-primary);
+}
+/*--Separadores--*/
+.hero__separator {
+  display: block;
+  width: 16px;
+  height: 1px;
+  margin: 18px auto 30px;
+
+  background-color: var(--brand-secondary);
+}
+@media (min-width: 1024px) {
+  .hero__separator {
+    margin: 18px 0 30px;
+  }
+}
+
+
+/*--------------------------------------------------
+  TIPOGRAFÍA REUTILIZABLE
+--------------------------------------------------*/
+
+.section-label {
+  color: var(--brand-secondary);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.section-label p {
+  max-width: 340px;
+  margin-top: 48px;
+
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
+
+.section-label h1 {
+  max-width: 340px;
+  margin-top: 40px;
+
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  color: var(--brand-main);
+}
+
+
+/*--------------------------------------------------
+  TEXTOS COMUNES DE LAS PÁGINAS
+--------------------------------------------------*/
+
+.section-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  line-height: var(--leading-tight);
+  font-weight: 600;
+  color: var(--brand-primary);
+}
+
+.section-text {
+  margin: 0;
+
+  font-family: var(--font-main);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.section-h2 {
+  margin: 0;
+
+  font-family: var(--font-main);
+  font-size: var(--text-small);
+  font-weight: 500;
+  text-align: center;
+}
