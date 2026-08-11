@@ -45,7 +45,7 @@
 
 .origin-hero__container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .origin-hero__content {
@@ -59,7 +59,10 @@
   font-family: var(--font-main);
   font-size: var(--text-caption);
   color: var(--brand-secondary);
-  text-align: center;
+  text-align: left;
+}
+.origin-hero .hero__separator {
+  margin-inline: 0 auto;
 }
 
 .origin-hero__title {

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Product.css";
 import InfoGrid from "../components/InfoGrid";
 import { productBenefits } from "../data/productBenefits";
+import mielRomero from "../assets/img/products/miel-romero.webp";
 
 function Product() {
   return (
@@ -22,7 +23,7 @@ function Product() {
           <div className="container-global product-hero__container">
             <div className="product-hero__image-wrapper">
               <img
-                src="/img/miel-romero.webp"
+                src={mielRomero}
                 alt="Tarro de miel de romero"
                 className="product-hero__image"
               />

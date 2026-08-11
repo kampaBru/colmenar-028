@@ -1,5 +1,7 @@
 import "./Hero.css";
 import { Link } from "react-router-dom";
+import portadaOlivo from "../assets/img/hero/abejas-olivo.webp";
+import portadaDesktop from "../assets/img/hero/portada-desktop.webp";
 
 function Hero() {
   return (
@@ -8,11 +10,11 @@ function Hero() {
         <picture>
           <source
             media="(min-width: 1024px)"
-            srcSet="/img/portada-desdtop.webp"
+            srcSet={portadaDesktop}
           />
 
           <img
-            src="/img/abejas-olivo.webp"
+            src={portadaOlivo}
             alt="Colmenas en un entorno natural y un enjambre de abejas sobre un olivo"
             className="hero-image"
           />

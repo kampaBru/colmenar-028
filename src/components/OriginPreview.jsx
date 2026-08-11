@@ -1,5 +1,8 @@
 import "./OriginPreview.css";
 import { Link } from "react-router-dom";
+import compromiso from "../assets/img/collectionpre/img-compromiso.webp";
+import compromisoIcon from "../assets/icons/compromiso.png";
+import origen from "../assets/icons/origen.png";
 
 function OriginPreview() {
   return (
@@ -8,7 +11,7 @@ function OriginPreview() {
         <div className="compromiso-content">
           <div className="compromiso-img">
             <img
-              src="/img/img-compromiso.webp"
+              src={compromiso}
               alt="Panal y polen de una colmena"
             />
           </div>
@@ -16,7 +19,7 @@ function OriginPreview() {
           <div className="compromiso-text">
             <div className="compromiso-eyebrow">
               <img
-                src="/img/compromiso.png"
+                src={compromisoIcon}
                 className="eyebrow-img"
                 alt=""
               />
@@ -49,7 +52,7 @@ function OriginPreview() {
           <div className="compromiso-quote">
             <div className="quote-icon">
               <img
-                src="/img/origen.png"
+                src={origen}
                 className="quote-img"
                 alt=""
               />

@@ -3,6 +3,16 @@ import InfoGrid from "../components/InfoGrid";
 import { originImpact } from "../data/originImpact";
 import { originProcess } from "../data/originProcess";
 
+
+import origenPradera from "../assets/img/origen/origen-pradera.webp";
+import origenColmena from "../assets/img/origen/origen-colmena.webp";
+import origenAlcarria from "../assets/img/origen/origen-alcarria.webp";
+
+import iconUbicacion from "../assets/icons/icon-ubicacion.svg";
+import iconCorazon from "../assets/icons/icon-corazon.svg";
+import iconHoja from "../assets/icons/icon-hoja.svg";
+
+
 function Origen() {
   return (
     <main className="origin-page">
@@ -34,7 +44,7 @@ function Origen() {
 
       <div className="origin-hero__image-wrapper">
         <img
-          src="/img/origen-pradera.webp"
+          src={origenPradera}
           alt="Pradera florida de La Alcarria"
           className="origin-hero__image"
         />
@@ -57,7 +67,7 @@ function Origen() {
 
           <div className="origin-story__image-wrapper">
             <img
-              src="/img/origen-colmena.webp"
+              src={origenColmena}
               alt="Colmena de abejas en un entorno natural"
               className="origin-story__image"
             />
@@ -88,7 +98,7 @@ function Origen() {
             <ul className="origin-principles__list">
               <li className="origin-principles__item">
                 <img
-                  src="/icons/icon-ubicacion.svg"
+                  src={iconUbicacion}
                   alt=""
                   className="origin-principles__icon"
                 />
@@ -107,7 +117,7 @@ function Origen() {
 
               <li className="origin-principles__item">
                 <img
-                  src="/icons/icon-corazon.svg"
+                  src={iconCorazon}
                   alt=""
                   className="origin-principles__icon"
                 />
@@ -126,7 +136,7 @@ function Origen() {
 
               <li className="origin-principles__item">
                 <img
-                  src="/icons/icon-hoja.svg"
+                  src={iconHoja}
                   alt=""
                   className="origin-principles__icon"
                 />
@@ -254,7 +264,7 @@ function Origen() {
 
           <div className="origin-landscape__image-wrapper">
             <img
-              src="/img/origen-alcarria.webp"
+              src={origenColmena}
               alt="Paisaje natural de La Alcarria"
               className="origin-landscape__image"
             />

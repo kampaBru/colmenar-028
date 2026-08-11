@@ -1,5 +1,7 @@
 import "./CollectionPreview.css";
 import { Link } from "react-router-dom";
+import  flores from "../assets/img/collectionpre/img-flores.webp";
+import romero from "../assets/img/collectionpre/img-romero.webp";
 
 function CollectionPreview() {
   return (
@@ -13,7 +15,7 @@ function CollectionPreview() {
           <article className="card-product">
             <div className="card-image">
               <img
-                src="/img/img-flores.webp"
+                src={flores}
                 alt="Campo de flores"
               />
             </div>
@@ -42,7 +44,7 @@ function CollectionPreview() {
           <article className="card-product">
             <div className="card-image">
               <img
-                src="/img/img-romero.webp"
+                src={romero}
                 alt="Campo de romero"
               />
             </div>

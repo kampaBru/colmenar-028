@@ -1,22 +1,27 @@
+import iconFlor from "../assets/icons/icon-flor.svg";
+import iconAbeja from "../assets/icons/icon-abeja.svg";
+import iconHoja from "../assets/icons/icon-hoja.svg";
+import iconUbicacion from "../assets/icons/icon-ubicacion.svg";
+
 export const productBenefits = [
   {
     id: "cosecha",
-    icon: "/icons/icon-flor.svg",
+    icon: iconFlor,
     title: "Cosecha propia",
   },
    {
     id: "origen",
-    icon: "/icons/icon-abeja.svg",
+    icon: iconAbeja,
     title: "Origen natural",
    },
   {
     id: "aditivos",
-    icon: "/icons/icon-hoja.svg",
+    icon: iconHoja,
     title: "Sin conservantes",
   },
   {
     id: "cruda",
-    icon: "/icons/icon-ubicacion.svg",
+    icon: iconUbicacion,
     title: "Miel cruda sin filtrar",
   },
 ];

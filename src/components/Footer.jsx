@@ -1,5 +1,11 @@
 import "./Footer.css";
 import { NavLink } from "react-router-dom";
+import logoHeader from "../assets/img/header/logo-tran.png";
+import iconInicio from "../assets/img/footer/menu.png";
+import iconOrigen from "../assets/img/footer/origen.png";
+import iconColeccion from "../assets/img/footer/colmena.png";
+import iconContacto from "../assets/icons/icon-contacto.svg";
+
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,7 +21,7 @@ function Footer() {
           aria-label="Ir al inicio"
         >
           <img
-            src="/img/logo-tran.png"
+            src={logoHeader}
             alt="Colmenar 028"
             className="footer-logo"
           />
@@ -35,7 +41,7 @@ function Footer() {
                 }
               >
                 <img
-                  src="/img/menu.png"
+                  src={iconInicio}
                   alt=""
                 />
                 <span>Inicio</span>
@@ -50,7 +56,7 @@ function Footer() {
                 }
               >
                 <img
-                  src="/img/origen.png"
+                  src={iconOrigen}
                   alt=""
                 />
                 <span>Origen</span>
@@ -65,7 +71,7 @@ function Footer() {
                 }
               >
                 <img
-                  src="/img/colmena.png"
+                  src={iconColeccion}
                   alt=""
                 />
                 <span>Colección</span>
@@ -80,7 +86,7 @@ function Footer() {
                 }
               >
                 <img
-                  src="/icons/icon-contacto.svg"
+                  src={iconContacto}
                   alt=""
                 />
                 <span>Contacto</span>

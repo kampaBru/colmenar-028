@@ -1,10 +1,12 @@
-  import './Collection.css'
-  import collectionFeatures from '../data/collectionFeatures'
-  import InfoGrid from '../components/InfoGrid'
-  import InfoCard from '../components/InfoCard'
-  import ProductGrid from '../components/ProductGrid'
-  import { products } from '../data/products'
+  import './Collection.css';
+  import collectionFeatures from '../data/collectionFeatures';
+  import InfoGrid from '../components/InfoGrid';
+  import InfoCard from '../components/InfoCard';
+  import ProductGrid from '../components/ProductGrid';
+  import { products } from '../data/products';
   import { Link } from "react-router-dom";
+
+  
 
 
 

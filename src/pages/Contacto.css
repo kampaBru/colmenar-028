@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
 
-  background-image: url("/img/img-compromiso.webp");
+  background-image: url("../assets/img/contacto/img-compromiso.webp");
   background-position: center;
   background-size: cover;
   overflow: hidden;

@@ -1,5 +1,8 @@
 import "./Contacto.css";
 
+import iconFlor from "../assets/icons/icon-flor.svg";
+import iconContacto from "../assets/icons/icon-contacto.svg";
+
 function Contacto() {
   function handleSubmit(event) {
     event.preventDefault();
@@ -183,7 +186,7 @@ function Contacto() {
 
             <div className="contact-details__note">
               <img
-                src="/icons/icon-flor.svg"
+                src={iconFlor}
                 alt=""
                 className="contact-details__note-icon"
               />
@@ -208,7 +211,7 @@ function Contacto() {
             aria-hidden="true"
           >
             <img
-              src="/icons/icon-contacto.svg"
+              src={iconContacto}
               alt=""
             />
           </div>

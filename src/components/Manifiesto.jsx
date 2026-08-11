@@ -1,4 +1,5 @@
-import './Manifiesto.css'
+import './Manifiesto.css';
+import filosofia from "../assets/img/manifiesto/img-filosofia.webp";
 
 function Manifiesto(){
   
@@ -7,7 +8,7 @@ function Manifiesto(){
   <section className="manifiesto">
     <div className="container-global manifiesto-container">
       <div className="manifiesto-image">
-        <img src="/img/img-filosofia.webp" alt="" />
+        <img src={filosofia} alt="" />
       </div>
       <div className="manifiesto-text">
         <h2 className="manifiesto-title">Nuestra filosofía</h2>

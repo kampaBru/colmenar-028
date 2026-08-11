@@ -1,6 +1,8 @@
 import "./Header.css";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import logoHeader from "../assets/img/header/logo-tran.png";
+import menuIcon from "../assets/icons/lucide_menu.svg";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +43,7 @@ function Header() {
           onClick={handleMenuLinkClick}
         >
           <img
-            src="/img/logo-tran.png"
+            src={logoHeader}
             alt="Colmenar 028"
             className="logo-header"
           />
@@ -57,7 +59,7 @@ function Header() {
           onClick={() => setIsMenuOpen((currentState) => !currentState)}
         >
           <img
-            src="/icons/lucide_menu.svg"
+            src={menuIcon}
             alt=""
             className="menu-icon"
           />
